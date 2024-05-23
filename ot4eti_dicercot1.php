@@ -55,6 +55,10 @@ foreach ($results as $result) {
 
 $labelsJson = json_encode($labels);
 $dataJson = json_encode($data);
+
+// Форматирование дат
+$dateFromFormatted = $dateFrom ? date('d.m.Y', strtotime($dateFrom)) : '';
+$dateToFormatted = $dateTo ? date('d.m.Y', strtotime($dateTo)) : '';
 ?>
 
 <!DOCTYPE html>
@@ -156,7 +160,7 @@ $dataJson = json_encode($data);
             </form>
         </div>
         <div class="results-section">
-            <h1>Отчет об объеме работы мастеров за период с <?= htmlspecialchars($dateFrom) ?> по <?= htmlspecialchars($dateTo) ?></h1>
+            <h1>Отчет об объеме работы мастеров за период с <?= htmlspecialchars($dateFromFormatted) ?> по <?= htmlspecialchars($dateToFormatted) ?></h1>
             <table>
                 <thead>
                     <tr>
