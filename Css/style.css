@@ -1,0 +1,509 @@
+:root {
+    --button-color-1: #ff5f6d; /* Красный градиент */
+    --button-color-2: #ffc371; /* Оранжевый градиент */
+    --text-color: #ffffff;
+}
+
+/* Стиль кнопок */
+.button {
+    display: inline-block;
+    padding: 10px 25px;
+    color: var(--text-color);
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-weight: bold;
+    background-image: linear-gradient(45deg, var(--button-color-1) 0%, var(--button-color-2) 100%);
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, var(--button-color-2) 0%, var(--button-color-1) 100%);
+    transition: left 0.3s ease;
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.button:hover::before {
+    left: 0;
+}
+
+.button span {
+    position: relative;
+    z-index: 2;
+}
+
+/* Дизайн для кнопок перехода между страницами */
+.navigation-button {
+    margin: 0 10px;
+}
+
+:root {
+    --body-bg-color: #fef9f8; /* Светлый фон для контраста с кнопками */
+    --header-footer-color: #ff5f6d; /* Цвет для шапки и подвала */
+    --hover-effect-color: #ffc371; /* Цвет для эффектов при наведении */
+}
+
+body {
+    background-color: var(--body-bg-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    background-color: var(--header-footer-color);
+    color: var(--text-color);
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li:not(:last-child) {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: var(--hover-effect-color);
+}
+
+main {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer {
+    background-color: var(--header-footer-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Стиль для общего контента */
+.content {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Анимация для ссылок и кнопок */
+a, .button {
+    transition: transform 0.2s ease-in-out;
+}
+
+a:hover, .button:hover {
+    transform: scale(1.05);
+}
+
+/* Стиль изображения */
+.salon-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 20px 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Стили для текста и кнопок */
+.welcome {
+    text-align: center; /* Центрирование текста и кнопок */
+    padding: 20px;
+}
+
+.buttons {
+    margin-top: 20px;
+}
+
+.button {
+    margin: 10px 5px; /* Обеспечивает небольшой отступ между кнопками */
+    display: inline-block; /* Кнопки выстраиваются в ряд */
+}
+
+
+.working-hours h2 {
+  text-align: center;
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.working-hours table {
+  width: 60%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+.working-hours th,
+.working-hours td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: center;
+  color: #666;
+}
+
+.working-hours th {
+  background-color: #e5e5e5;
+  color: #333;
+  font-weight: bold;
+}
+
+.working-hours td {
+  background-color: #fef9f8;
+}
+
+
+.service-photo {
+    width: 100%; /* Занимает всю ширину контейнера услуги */
+    max-width: 300px; /* Максимальная ширина изображения */
+    height: auto; /* Высота автоматически изменяется для сохранения пропорций */
+    border-radius: 5px; /* Скругление углов фотографии */
+    margin: 0 auto 20px; /* Центрирование фотографии и отступ снизу */
+    display: block; /* Фотография блочного типа для корректного отображения */
+}
+
+.service-item {
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 600px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Центрирование текста и изображения внутри блока */
+}
+
+
+/* Стилизация списка услуг */
+.service-item {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service-photo {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+
+.specialists-section {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.specialist-item {
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.specialist-photo {
+    float: left;
+    margin-right: 20px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.specialist-item h3 {
+    margin-top: 0;
+}
+
+.specialist-item p {
+    margin: 5px 0;
+    line-height: 1.5;
+}
+
+/* Очистка float */
+.specialist-item::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.bonus-card-item .button {
+    background: linear-gradient(45deg, #ff5f6d, #ffc371); /* Градиент для кнопки */
+    color: white;
+    padding: 10px 25px; /* Отступы для кнопки */
+    margin: 10px 0; /* Внешний отступ сверху и снизу */
+    border: none;
+    cursor: pointer;
+    font-size: 16px; /* Размер шрифта для текста внутри кнопки */
+    font-weight: bold; /* Жирность текста */
+    border-radius: 20px; /* Скругление углов кнопки */
+    transition: all 0.3s ease; /* Плавный переход для эффектов наведения */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
+  }
+  
+  .bonus-card-item .button:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Более заметная тень при наведении */
+    background: linear-gradient(45deg, #ff3e50, #ff9a71); /* Более тёмный градиент при наведении */
+  }
+  
+  /* Расположение и стиль для секции бонусных карт */
+  .bonus-cards-section {
+    background: #f7f7f7; /* Светлый фон для секции */
+    padding: 40px 0;
+  }
+  
+  .bonus-cards-section .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .bonus-cards-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start; /* Выравнивание карточек по верхнему краю */
+    flex-wrap: wrap; /* Адаптивность для обтекания */
+  }
+  
+  /* Стилизация элементов карточки бонусов */
+  .bonus-card-item {
+    width: calc(33.333% - 40px); /* Расчёт ширины с учётом отступов */
+    margin: 20px; /* Отступы вокруг карточек */
+    padding: 20px; /* Внутренние отступы карточки */
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex; /* Использование flexbox для внутренних элементов */
+    flex-direction: column; /* Элементы выстраиваются в колонку */
+    justify-content: space-between; /* Распределение пространства между элементами */
+    height: 100%; /* Высота карточек будет одинаковой */
+  }
+  
+  /* Стилизация текста для названия карты и преимуществ */
+  .bonus-card-item h3 {
+    color: #333;
+    font-size: 18px; /* Уменьшен размер шрифта для заголовка */
+    margin-bottom: 15px; /* Увеличенный отступ снизу для заголовка */
+  }
+  
+  .bonus-card-item p {
+    font-size: 14px; /* Уменьшен размер шрифта для описания */
+    line-height: 1.6; /* Измененная высота строки */
+    color: #666;
+  }
+
+
+  body {
+  font-family: 'Arial', sans-serif;
+  background: var(--body-bg-color);
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+header {
+  background-color: var(--header-footer-color);
+  padding: 20px 0;
+  color: var(--text-color);
+}
+
+header h1, footer p {
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+/* Стили формы */
+form {
+  background: #fff;
+  padding: 40px;
+  margin-top: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form select,
+form input[type="text"],
+form input[type="email"],
+form input[type="submit"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+form input[type="submit"] {
+  background-color: var(--button-color-1);
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+}
+
+form input[type="submit"]:hover {
+  background-color: var(--button-color-2);
+}
+
+/* Стилизация активной ссылки */
+nav .active, nav ul li a:hover {
+  background-color: var(--button-color-2);
+  border-radius: 20px;
+}
+
+footer {
+  background-color: var(--header-footer-color);
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Медиа-запросы для экранов шириной до 768px (планшеты и мобильные телефоны) */
+@media (max-width: 768px) {
+  body, .container, header, main, footer {
+      padding: 8px; /* Оптимизация паддингов */
+      margin: 0 auto;
+  }
+
+  header, .navigation-bar, footer {
+      text-align: center;
+  }
+
+  nav ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  nav ul li {
+      width: 100%;
+      margin: 8px 0;
+  }
+
+  nav ul li a {
+      padding: 12px; /* Увеличение паддинга для лучшей нажимаемости */
+      display: block;
+  }
+
+   .bonus-card-item {
+      width: 100%;
+  }
+}
+
+  /* Медиа-запросы для планшетов */
+@media (max-width: 768px) {
+    .specialist-photo {
+        width: 120px; /* Уменьшенный размер изображения */
+        height: 120px;
+    }
+
+    .specialist-item {
+        text-align: center; /* Центрирование текста */
+        padding: 15px; /* Уменьшенные паддинги */
+    }
+
+    .specialist-photo {
+        margin-right: 0; /* Убираем отступ справа */
+        margin-bottom: 10px; /* Добавляем отступ снизу */
+        float: none; /* Отключаем обтекание */
+        display: block; /* Блочное отображение */
+        margin-left: auto; /* Центрирование */
+        margin-right: auto;
+    }
+}
+
+/* Медиа-запросы для мобильных телефонов */
+@media (max-width: 480px) {
+    .specialist-photo {
+        width: 100px; /* Ещё меньше размер изображения */
+        height: 100px;
+    }
+
+    .specialist-item {
+        padding: 10px; /* Ещё меньше паддинги */
+    }
+
+    .specialist-item::after {
+        clear: both; /* Убедимся, что нет проблем с обтеканием */
+    }
+  .button {
+      width: 95%;
+      margin: 10px auto;
+  }
+  header h1, footer p {
+    font-size: 18px; /* Увеличение размера шрифта для лучшей читаемости */
+}
+
+.content, form, .welcome, .working-hours table {
+    padding: 5px;
+}
+
+form input[type="text"], form input[type="email"], form select {
+    font-size: 16px; /* Увеличение размера шрифта для улучшенной доступности */
+}
+}
+
