@@ -66,7 +66,6 @@ $totalCost = array_sum(array_column($services, 'cost'));
         }
         .forms-section { 
             flex: 1; 
-             
             flex-direction: column;
         }
         .results-section { 
@@ -142,14 +141,14 @@ $totalCost = array_sum(array_column($services, 'cost'));
             </form>
         </div>
         <div class="results-section">
-        <h1>Отчет об оказаниии услуг за период с <?= htmlspecialchars($dateFrom) ?> по <?= htmlspecialchars($dateTo) ?></h1>
+        <h1>Отчет об оказании услуг за период с <?= htmlspecialchars($dateFrom) ?> по <?= htmlspecialchars($dateTo) ?></h1>
             <table>
                 <thead>
                     <tr>
                         <th>Услуга</th>
                         <th>Специалист</th>
                         <th>Клиент</th>
-                        <th>Дата</th>
+                        <th>Дата и время</th>
                         <th>Стоимость</th>
                     </tr>
                 </thead>
@@ -160,7 +159,7 @@ $totalCost = array_sum(array_column($services, 'cost'));
                                 <td><?= htmlspecialchars($service['service']) ?></td>
                                 <td><?= htmlspecialchars($service['specialist']) ?></td>
                                 <td><?= htmlspecialchars($service['client']) ?></td>
-                                <td><?= htmlspecialchars($service['date']) ?></td>
+                                <td><?= htmlspecialchars(date('H:i:s d.m.Y', strtotime($service['date']))) ?></td>
                                 <td><?= htmlspecialchars($service['cost']) ?> руб.</td>
                             </tr>
                         <?php endforeach; ?>
