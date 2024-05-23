@@ -45,6 +45,10 @@ $stmt->execute($params);
 $services = $stmt->fetchAll();
 
 $totalCost = array_sum(array_column($services, 'cost'));
+
+// Форматирование дат для заголовка
+$dateFromFormatted = $dateFrom ? date('d.m.Y', strtotime($dateFrom)) : '';
+$dateToFormatted = $dateTo ? date('d.m.Y', strtotime($dateTo)) : '';
 ?>
 
 <!DOCTYPE html>
@@ -141,7 +145,7 @@ $totalCost = array_sum(array_column($services, 'cost'));
             </form>
         </div>
         <div class="results-section">
-        <h1>Отчет об оказании услуг за период с <?= htmlspecialchars($dateFrom) ?> по <?= htmlspecialchars($dateTo) ?></h1>
+            <h1>Отчет об оказании услуг за период с <?= htmlspecialchars($dateFromFormatted) ?> по <?= htmlspecialchars($dateToFormatted) ?></h1>
             <table>
                 <thead>
                     <tr>
