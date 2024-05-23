@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Редактирование профиля</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+      profile-container h2 {
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .button-group {
+    display: flex;
+    justify-content: center; /* Центрирование кнопок внутри группы */
+    gap: 15px; /* Отступ между кнопками */
+    padding-top: 20px; /* Дополнительный отступ сверху */
+}
+
+.button {
+    flex-grow: 1; /* Кнопки займут все доступное пространство */
+    text-align: center; /* Центрирование текста кнопок */
+    padding: 10px 20px; /* Паддинг для кнопок */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Beauty Lab Store</h1>
+            <nav>
+                <ul>
+                <a href="index1.html" class="button navigation-button"><span>Главная</span></a>
+<a href="services1.php" class="button navigation-button"><span>Услуги</span></a>
+<a href="appointment.php" class="button navigation-button"><span>Запись на прием</span></a>
+<a href="profile.html" class="button navigation-button"><span>Профиль</span></a>
+<a href="my_appointments.php" class="button navigation-button"><span>Мои заявки</span></a>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<div class="container profile-container">
+    <h2>Редактирование профиля</h2>
+    <form action="update_profile.php" method="post">
+        <label for="full_name">ФИО:</label>
+        <input type="text" id="full_name" name="full_name" placeholder="Полное имя" required>
+        <label for="birth_date">Дата рождения:</label>
+        <input type="date" id="birth_date" name="birth_date" required>
+        <label for="gender">Пол:</label>
+        <select id="gender" name="gender" required>
+            <option value="муж">Муж</option>
+            <option value="жен">Жен</option>
+        </select>
+        <label for="phone">Телефон:</label>
+        <input type="text" id="phone" name="phone" placeholder="Телефон" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+        <div class="button-group">
+        <button type="submit" class="button">Сохранить изменения</button>
+       <!-- Обновленная ссылка для выхода из аккаунта -->
+       <a href="logout.php" class="button"><span>Выйти из аккаунта</span></a>
+       </div>
+
+    </form>
+</div>
+<footer>
+        <div class="container">
+            <p>Контактная информация: +7 123 456-78-90, salon@example.com</p>
+        </div>
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('update') === 'success') {
+        alert('Данные успешно обновлены.');
+    }
+});
+</script>
+</body>
+</html>

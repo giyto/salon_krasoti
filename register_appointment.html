@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Салон Красоты</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fef9f8;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            width: 100%;
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 20px;
+            border: none;
+            background-color: #ff5f6d;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+
+        .button:hover {
+            background-color: #ff3e50;
+        }
+        .form-input:focus {
+            border-color: #ff5f6d;
+            box-shadow: 0 0 8px rgba(255, 95, 109, 0.2);
+            outline: none; /* Removes the default focus outline */
+            transition: border 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        
+        .form-input::placeholder {
+            color: #bbb;
+        }
+        
+        .error-message {
+            color: #ff3e50;
+            font-size: 14px;
+            margin-bottom: 15px;
+            display: none; /* Hide by default, display when there is an error */
+        }
+        
+        
+        @media (max-width: 768px) {
+            .login-container {
+                width: 90%; /* Makes the container take more space on smaller screens */
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .login-container {
+                width: 95%; /* Makes the container take more space on very small screens */
+                padding: 10px; /* Reduce padding to fit smaller screens */
+            }
+        }
+
+        * Общая эстетика */
+body {
+    background-image: url('data:image/svg+xml;base64,...'); /* Добавьте тонкий узор в кодировке base64 */
+    background-attachment: fixed; /* Фиксирует фон для эффекта параллакса при прокрутке */
+}
+
+/* Эстетика формы */
+.login-container {
+    background-image: linear-gradient(to bottom right, #ffffff, #f9f9f9);
+    overflow: hidden; /* Скрывает все, что выходит за границы контейнера */
+}
+
+/* Интерактивные эффекты */
+.form-input:focus,
+.button:focus {
+    transform: scale(1.02); /* Незначительно увеличивает размер для индикации фокуса */
+    transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
+
+.button:active {
+    transform: scale(0.98); /* Незначительно уменьшает размер, имитируя нажатие кнопки */
+    transition: transform 0.2s;
+}
+
+/* Типографика */
+.login-container h1, 
+.login-container h2,
+.login-container h3 {
+    color: #333; /* Более тёмный цвет для заголовков для контрастности */
+    font-weight: 700; /* Жирное начертание для заголовков */
+    margin-bottom: 1em; /* Добавляет больше места под заголовками */
+}
+
+/* Настройки типографики для ввода и кнопок */
+.form-input,
+.button {
+    font-weight: 400; /* Нормальная жирность шрифта для полей ввода и кнопок */
+    letter-spacing: 0.05em; /* Небольшое увеличение межбуквенного интервала для улучшения читаемости */
+}
+
+/* Адаптивная типографика */
+@media (max-width: 768px) {
+    .login-container h1,
+    .login-container h2,
+    .login-container h3 {
+        font-size: 1.5em; /* Меньший размер заголовков для маленьких экранов */
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container h1,
+    .login-container h2,
+    .login-container h3 {
+        font-size: 1.3em; /* Ещё меньший размер заголовков для очень маленьких экранов */
+    }
+}
+     
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h1>Регистрация</h1>
+        <form action="register_clients.php" method="post">
+    <input type="text" name="login" class="form-input" placeholder="Логин или Email" required>
+    <input type="password" name="password" class="form-input" placeholder="Пароль" required>
+    <input type="password" name="confirm_password" class="form-input" placeholder="Подтвердите пароль" required>
+    <input type="submit" value="Зарегистрироваться" class="button">
+</form>
+        <p>Уже зарегистрированы? <a href="login_appointment.html">Вход</a></p>
+    </div>
+</body>
+</html>
