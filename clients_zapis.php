@@ -1,6 +1,6 @@
 <?php
 session_start();
-require 'vendor/autoload.php'; // Подключаем автозагрузчик Composer, если необходимо
+
 
 // Подключение к базе данных
 $pdo = new PDO('mysql:host=localhost;dbname=salon', 'root', '', [
