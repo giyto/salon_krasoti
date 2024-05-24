@@ -29,8 +29,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
     // Проверка, является ли пользователь администратором, директором или пользователем
-    $admin_usernames = array("administrator", "administrator1", "administrator2", "administrator3", "administrator4", "administrator5");
-    $director_usernames = array("director", "director1", "director2", "director3", "director4", "director5");
+    $admin_usernames = array("administrator");
+    $director_usernames = array("director");
     
     if (in_array($login, $admin_usernames)) {
         // Вставка данных в таблицу администраторов
