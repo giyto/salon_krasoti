@@ -29,7 +29,7 @@ try {
     <title>Список услуг - Салон красоты</title>
     <link rel="stylesheet" href="Css/style.css">
     <style>
-        /* Базовые стили для списка услуг */
+      
        
         .container1 {
             width: 80%;
