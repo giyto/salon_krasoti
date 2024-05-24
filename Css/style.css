@@ -218,12 +218,6 @@ a:hover, .button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.service-photo {
-    max-width: 100%;
-    border-radius: 5px;
-    margin-bottom: 20px;
-}
-
 
 
 
@@ -240,97 +234,6 @@ a:hover, .button:hover {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     text-align: left;
 }
-
-.specialist-photo {
-    float: left;
-    margin-right: 20px;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.specialist-item h3 {
-    margin-top: 0;
-}
-
-.specialist-item p {
-    margin: 5px 0;
-    line-height: 1.5;
-}
-
-/* Очистка float */
-.specialist-item::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.bonus-card-item .button {
-    background: linear-gradient(45deg, #ff5f6d, #ffc371); /* Градиент для кнопки */
-    color: white;
-    padding: 10px 25px; /* Отступы для кнопки */
-    margin: 10px 0; /* Внешний отступ сверху и снизу */
-    border: none;
-    cursor: pointer;
-    font-size: 16px; /* Размер шрифта для текста внутри кнопки */
-    font-weight: bold; /* Жирность текста */
-    border-radius: 20px; /* Скругление углов кнопки */
-    transition: all 0.3s ease; /* Плавный переход для эффектов наведения */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тень для кнопки */
-  }
-  
-  .bonus-card-item .button:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Более заметная тень при наведении */
-    background: linear-gradient(45deg, #ff3e50, #ff9a71); /* Более тёмный градиент при наведении */
-  }
-  
-  /* Расположение и стиль для секции бонусных карт */
-  .bonus-cards-section {
-    background: #f7f7f7; /* Светлый фон для секции */
-    padding: 40px 0;
-  }
-  
-  .bonus-cards-section .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-  }
-  
-  .bonus-cards-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start; /* Выравнивание карточек по верхнему краю */
-    flex-wrap: wrap; /* Адаптивность для обтекания */
-  }
-  
-  /* Стилизация элементов карточки бонусов */
-  .bonus-card-item {
-    width: calc(33.333% - 40px); /* Расчёт ширины с учётом отступов */
-    margin: 20px; /* Отступы вокруг карточек */
-    padding: 20px; /* Внутренние отступы карточки */
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex; /* Использование flexbox для внутренних элементов */
-    flex-direction: column; /* Элементы выстраиваются в колонку */
-    justify-content: space-between; /* Распределение пространства между элементами */
-    height: 100%; /* Высота карточек будет одинаковой */
-  }
-  
-  /* Стилизация текста для названия карты и преимуществ */
-  .bonus-card-item h3 {
-    color: #333;
-    font-size: 18px; /* Уменьшен размер шрифта для заголовка */
-    margin-bottom: 15px; /* Увеличенный отступ снизу для заголовка */
-  }
-  
-  .bonus-card-item p {
-    font-size: 14px; /* Уменьшен размер шрифта для описания */
-    line-height: 1.6; /* Измененная высота строки */
-    color: #666;
-  }
 
 
   body {
