@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost"; // замените на ваш сервер
-$username = "root"; // замените на ваше имя пользователя
-$password = ""; // замените на ваш пароль
-$dbname = "salon"; // замените на ваше имя базы данных
+$servername = "localhost"; 
+$username = "root"; 
+$password = ""; 
+$dbname = "salon"; 
 
 // Создание соединения
 $conn = new mysqli($servername, $username, $password, $dbname);
